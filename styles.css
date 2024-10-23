@@ -1,0 +1,185 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-image: url('../imagenes/navi.jpeg'); /* Ruta de tu imagen */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #333; /* Color del texto */
+    min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la pantalla */
+    text-align: center; /* Alineación del texto */
+}
+
+/* Secciones y Footer */
+section, footer {
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen alrededor */
+    position: relative; /* Permite el uso de z-index */
+    z-index: 1; /* Asegura que el contenido esté por encima del fondo */
+}
+
+/* Estilo específico para la sección de contacto */
+.contact-section {
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco más opaco */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Encabezados */
+h2, h3 {
+    margin: 25px 0;
+    color: #d9534f;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #ff0000, #28a745); /* Degradado rojo a verde */
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-content img.logo {
+    width: 120px; /* Tamaño adecuado del logo */
+    height: auto;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 1px;
+}
+
+/* Menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background: linear-gradient(to right, #28a745, #6fbf73); /* Degradado verde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: background 0.3s, transform 0.2s; /* Transiciones suaves */
+}
+
+nav ul li a:hover {
+    background: linear-gradient(to right, #6fbf73, #28a745); /* Degradado verde en hover */
+    transform: translateY(-2px); /* Eleva el botón al hacer hover */
+}
+
+/* Carrusel */
+.carousel {
+    width: calc(100% - 2cm); /* Ancho total menos márgenes de 2 cm a cada lado */
+    height: 480px; /* Altura ajustada */
+    margin: 40px auto; /* Margen automático para centrar */
+    border-radius: 20px; /* Bordes redondeados */
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Mantiene la imagen en su tamaño original */
+    max-height: 100%; /* Asegura que la imagen no supere la altura del contenedor */
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(to left, #ff0000, #28a745); /* Degradado rojo a verde */
+    color: white;
+    padding: 20px 0;
+}
+
+.social-media {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media a {
+    margin: 0 15px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para la imagen del equipo */
+.team-member {
+    display: inline-block; /* Asegura que el contenedor tenga el tamaño adecuado */
+}
+
+.team-member img {
+    width: 100%; /* Mantiene el tamaño original */
+    height: auto; /* Mantiene la relación de aspecto */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para efectos */
+}
+
+.team-member img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más intensa al pasar el mouse */
+    transform: scale(1.05); /* Ligeramente aumenta el tamaño */
+    filter: brightness(1.1); /* Aumenta el brillo ligeramente */
+}
+
+/* Estilos para la sección de contacto */
+.contact-section {
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.contact-image {
+    width: 100%; /* O ajusta al tamaño que necesites */
+    max-width: 400px; /* Tamaño máximo */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 15px; /* Bordes redondeados */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
